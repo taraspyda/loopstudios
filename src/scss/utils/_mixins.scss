@@ -1,0 +1,31 @@
+@mixin onMobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin square ($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle ($size) {
+  @include square($size);
+  border-radius: 50%;
+}
+
+@mixin adaptive-value($property, $max-size, $min-size) {
+  $difference: $max-size - $min-size;
+
+  #{$property}: $max-size + px;
+
+  @media (max-width: #{$max-width + px}) {
+    #{$property}: calc(#{$min-size + px} + #{$difference} * ((100vw - 320px) / #{$max-width - 320}));
+  }
+}
