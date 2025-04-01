@@ -1,0 +1,21 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: $c_black;
+  translate: -100%;
+  transition-duration: $amin-time;
+
+  &--active {
+    translate: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
