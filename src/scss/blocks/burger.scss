@@ -1,0 +1,29 @@
+.burger {
+  position: relative;
+  width: 24px;
+  padding-block: 7px;
+
+  &__line,
+  &::before,
+  &::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $c_white;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}

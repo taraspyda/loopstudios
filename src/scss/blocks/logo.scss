@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  @include adaptive-value('width', 192, 144);
+  @include adaptive-value('height', 32, 24);
+  background-image: url("/public/images/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
