@@ -1,3 +1,38 @@
 .footer {
+  @include adaptive-value('padding-block', 44, 56);
+  background-color: $c_black;
+  color: $c_white;
 
+  &__content {
+    display: grid;
+    grid-auto-flow: column;
+
+    @include onTablet {
+      grid-auto-flow: row;
+      row-gap: 48px;
+    }
+  }
+
+  &__column {
+    display: grid;
+    row-gap: 24px;
+
+    @include onTablet {
+      justify-items: center;
+      row-gap: 32px;
+    }
+
+    &--right {
+      justify-items: end;
+
+      @include onTablet {
+        justify-items: center;
+        row-gap: 16px;
+      }
+    }
+  }
+
+  &__copyright {
+    opacity: 0.5;
+  }
 }
