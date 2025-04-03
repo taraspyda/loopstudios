@@ -1,0 +1,60 @@
+.about {
+  @include adaptive-value('padding-bottom', 0, 347);
+
+  @include onMobile {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    position: relative;
+
+    @include onMobile {
+      display: grid;
+      row-gap: 48px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 731px;
+    aspect-ratio: 327 / 224;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  &__article {
+    position: absolute;
+    @include adaptive-value('bottom', 0, -347);
+    right: 0;
+    display: grid;
+    row-gap: 25px;
+    max-width: 541px;
+    @include adaptive-value('padding-top', 96, 30);
+    @include adaptive-value('padding-left', 96, 30);
+    background-color: $c_white;
+    
+    @include onMobile {
+      position: relative;
+      top: 0;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    @extend %h2;
+
+    @include onMobile {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    opacity: 0.5;
+
+    @include onMobile {
+      text-align: center;
+      padding-inline: 23px;
+    }
+  }
+}

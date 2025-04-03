@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: $c_white;
   @extend %main-text;
   color: $c_black;
 
@@ -15,5 +16,13 @@
     @include onTablet {
       display: block;
     }
+  }
+
+  &__hero {
+    @include adaptive-value('margin-bottom', 160, 96);
+  }
+
+  &__section {
+    @include adaptive-value('margin-bottom', 184, 96);
   }
 }
