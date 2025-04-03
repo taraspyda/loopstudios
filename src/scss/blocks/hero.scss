@@ -1,0 +1,27 @@
+.hero {
+  background-image: url("/public/images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $c_white;
+
+  @include onMobile {
+    background-image: url("/public/images/mobile/image-hero.jpg");
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    height: 100vh;
+    max-height: 1200px;
+    padding-top: $header-height;
+  }
+
+  &__title {
+    max-width: 650px;
+    border: 2px solid $c_white;
+    @include adaptive-value('padding', 40, 24);
+    @extend %h1;
+  }
+}
