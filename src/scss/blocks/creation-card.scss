@@ -1,0 +1,91 @@
+.creation-card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &--earth {
+    background-image: url("/public/images/desktop/image-deep-earth.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-deep-earth.jpg");
+    }
+  }
+
+  &--arcade {
+    background-image: url("/public/images/desktop/image-night-arcade.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-night-arcade.jpg");
+    }
+  }
+
+  &--soccer {
+    background-image: url("/public/images/desktop/image-soccer-team.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-soccer-team.jpg");
+    }
+  }
+
+  &--grid {
+    background-image: url("/public/images/desktop/image-grid.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-grid.jpg");
+    }
+  }
+
+  &--from-above {
+    background-image: url("/public/images/desktop/image-from-above.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile//image-from-above.jpg");
+    }
+  }
+
+  &--borealis {
+    background-image: url("/public/images/desktop/image-pocket-borealis.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-pocket-borealis.jpg");
+    }
+  }
+
+  &--curiosity {
+    background-image: url("/public/images/desktop/image-curiosity.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-curiosity.jpg");
+    }
+  }
+
+  &--fisheye {
+    background-image: url("/public/images/desktop/image-fisheye.jpg");
+
+    @include onMobile {
+      background-image: url("/public/images/mobile/image-fisheye.jpg");
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    aspect-ratio: 256 / 450;
+    @include adaptive-value('padding-block', 40, 20);
+    @include adaptive-value('padding-inline', 32, 20);
+    background: linear-gradient(180.00deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.6) 100%);
+    @extend %h3;
+    color: $c_white;
+    transition-duration: $amin-time;
+
+    @include onMobile {
+      aspect-ratio: 327 / 120;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.75);
+      color: $c_black;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 40px;
+  border: 1px solid $c_black;
+  @extend %button-text;
+  color: $c_black;
+  transition-duration: $amin-time;
+
+  &:hover {
+    background-color: $c_black;
+    color: $c_white;
+  }
+}
